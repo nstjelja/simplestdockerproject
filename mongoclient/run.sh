@@ -1,1 +1,1 @@
-docker run -p 32002:8081 mongodb-with-client
+docker run -p 8081:8081 -d mongodb-with-client
