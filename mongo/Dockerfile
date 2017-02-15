@@ -15,8 +15,13 @@ EXPOSE 27017
 EXPOSE 28017
 
 ADD addadminuser.js /data/addadminuser.js
+ADD test.ps /data/test.ps
 ADD start.ps /data/start.ps
+RUN chmod u+rwx /data/test.ps
 RUN chmod u+rwx /data/start.ps
 
 CMD  /data/start.ps
+
+HEALTHCHECK --retries=10 CMD /data/test.ps 
+
 

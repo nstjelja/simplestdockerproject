@@ -2,4 +2,4 @@ mongod --fork --logpath /data/mongodb.log
 sleep 10
 mongo admin /data/addadminuser.js
 mongod --shutdown
-mongod --rest --httpinterface --auth --logpath /data/mongodb.log
+exec mongod --rest --httpinterface --auth --logpath /data/mongodb.log

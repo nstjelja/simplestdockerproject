@@ -1,0 +1,19 @@
+#!/bin/bash
+authenticated=$(mongo admin --eval "db.auth('admin','pass')")
+
+RESULT=$?   # returns 0 if mongo eval succeeds
+
+if [ $RESULT -ne 0 ]; then
+    echo "mongodb not running"
+    exit 1
+fi
+
+echo "MongoDB running"
+
+case $authenticated in
+   *"Error: Authentication failed"*)
+      echo "Authentication not set"
+      exit 1;;
+   *)
+      echo "Authentication set";;
+esac
