@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
-var url = 'mongodb://admin:pass@172.17.0.1:32000/admin';
+var url = 'mongodb://admin:pass@mongo:27017/admin';
 
 var count = 0;
 var clearIntervalToken = setInterval(function(){

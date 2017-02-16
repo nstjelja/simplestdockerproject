@@ -1,0 +1,9 @@
+node ./app/checkmongo.js
+
+if [$? -ne 0]
+then
+    echo "Mongodb not aviable. Dieing a horrible death"
+    exit 1
+fi
+
+exec node ./node_modules/mongo-express/app.js
