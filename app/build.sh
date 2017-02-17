@@ -1,0 +1,1 @@
+docker build -t local-app:1 .

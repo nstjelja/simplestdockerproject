@@ -1,4 +1,5 @@
 #!/bin/bash
+
 authenticated=$(mongo admin --eval "db.auth('admin','pass')")
 
 RESULT=$?   # returns 0 if mongo eval succeeds

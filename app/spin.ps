@@ -1,0 +1,3 @@
+docker container rm -f -v app
+scriptDirectory="$(cd $(dirname "$0"); pwd)";
+docker run --name app -v "$scriptDirectory:/opt/app" local-app:1 
